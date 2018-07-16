@@ -1,0 +1,127 @@
+[INFO][2018-04-13 13:15:38,148][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-04-13 13:15:38,179][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri Apr 13 13:15:38 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-04-13 13:15:38,182][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-04-13 13:15:39,456][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-04-13 13:15:39,458][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-04-13 13:15:39,460][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-04-13 13:15:39,461][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-04-13 13:15:39,466][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-04-13 13:15:39,467][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-04-13 13:15:39,468][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-04-13 13:15:39,468][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-04-13 13:15:39,469][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-04-13 13:15:39,633][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 1468 ms
+[INFO][2018-04-13 13:15:39,688][com.hl95.sms.service.impl.StatusReportServiceImpl]从数据库中获取下行数据数量=50
+[INFO][2018-04-13 13:15:40,155][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:15:40,155][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量50
+[INFO][2018-04-13 13:15:44,079][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590182222685643719&statusCode=3&sendTime=201804131315|推送结果SUCCESS
+[INFO][2018-04-13 13:15:44,084][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:15:44,085][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量49
+[INFO][2018-04-13 13:15:44,350][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590183488411179083&statusCode=3&sendTime=201804131315|推送结果SUCCESS
+[INFO][2018-04-13 13:15:44,356][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:15:44,356][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量48
+[INFO][2018-04-13 13:15:44,594][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590183698350794921&statusCode=3&sendTime=201804131315|推送结果SUCCESS
+[INFO][2018-04-13 13:15:44,600][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:15:44,601][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量47
+[INFO][2018-04-13 13:15:44,843][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312287668152028&statusCode=3&sendTime=201804131315|推送结果SUCCESS
+[INFO][2018-04-13 13:15:44,849][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:15:44,849][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量46
+[INFO][2018-04-13 13:15:45,082][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312301440800347&statusCode=3&sendTime=201804131315|推送结果SUCCESS
+[INFO][2018-04-13 13:15:45,088][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:15:45,088][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量45
+[INFO][2018-04-13 13:15:45,341][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312295319550496&statusCode=3&sendTime=201804131315|推送结果SUCCESS
+[INFO][2018-04-13 13:15:45,347][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:15:45,348][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量44
+[INFO][2018-04-13 13:15:45,575][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312319997131050&statusCode=3&sendTime=201804131315|推送结果SUCCESS
+[INFO][2018-04-13 13:15:45,580][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:15:45,580][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量43
+[INFO][2018-04-13 13:15:45,815][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312328896054192&statusCode=3&sendTime=201804131315|推送结果SUCCESS
+[INFO][2018-04-13 13:15:45,820][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:15:45,821][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量42
+[INFO][2018-04-13 13:15:46,064][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312342576200434&statusCode=3&sendTime=201804131315|推送结果SUCCESS
+[INFO][2018-04-13 13:15:46,069][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:15:46,069][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量41
+[INFO][2018-04-13 13:15:56,300][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312537661573346&statusCode=3&sendTime=201804131315|推送结果SUCCESS
+[INFO][2018-04-13 13:15:56,307][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:15:56,308][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量40
+[INFO][2018-04-13 13:16:05,576][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312542186062737&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:05,582][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:05,583][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量39
+[INFO][2018-04-13 13:16:05,812][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312548391530066&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:05,817][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:05,817][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量38
+[INFO][2018-04-13 13:16:06,048][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312550915926308&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:06,053][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:06,053][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量37
+[INFO][2018-04-13 13:16:06,286][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=152359031255364698179&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:06,291][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:06,291][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量36
+[INFO][2018-04-13 13:16:06,393][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:06,394][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量36
+[INFO][2018-04-13 13:16:06,653][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=152359031256236715708&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:06,657][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:06,657][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量35
+[INFO][2018-04-13 13:16:09,901][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312573249172272&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:09,907][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:09,907][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量34
+[INFO][2018-04-13 13:16:10,135][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312577196580926&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:10,140][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:10,140][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量33
+[INFO][2018-04-13 13:16:10,365][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312580263561354&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:10,371][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:10,372][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量32
+[INFO][2018-04-13 13:16:10,601][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312581839966501&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:10,607][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:10,607][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量31
+[INFO][2018-04-13 13:16:10,834][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312575863386898&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:10,839][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:10,839][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量30
+[INFO][2018-04-13 13:16:14,097][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312583973506221&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:14,102][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:14,102][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量29
+[INFO][2018-04-13 13:16:14,334][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=152359031258567654053&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:14,339][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:14,339][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量28
+[INFO][2018-04-13 13:16:14,443][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:14,443][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量28
+[INFO][2018-04-13 13:16:14,675][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312589687698379&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:14,679][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:14,679][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量27
+[INFO][2018-04-13 13:16:14,776][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:14,776][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量27
+[INFO][2018-04-13 13:16:15,003][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312597939898212&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:15,007][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:15,007][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量26
+[INFO][2018-04-13 13:16:15,231][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312598706094275&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:15,236][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:15,236][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量25
+[INFO][2018-04-13 13:16:15,467][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312601585614939&statusCode=2&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:15,471][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:15,471][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量24
+[INFO][2018-04-13 13:16:15,712][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312602215440358&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:15,720][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:15,720][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量23
+[INFO][2018-04-13 13:16:15,819][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:15,821][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量23
+[INFO][2018-04-13 13:16:19,042][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312611315267222&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:19,048][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:19,048][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量22
+[INFO][2018-04-13 13:16:19,282][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312607863240669&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:19,287][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:19,287][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量21
+[INFO][2018-04-13 13:16:19,385][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:19,385][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量21
+[INFO][2018-04-13 13:16:19,644][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312614674986669&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:19,649][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:19,649][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量20
+[INFO][2018-04-13 13:16:19,866][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312618566461479&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:19,871][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:19,872][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量19
+[INFO][2018-04-13 13:16:20,095][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312622937506642&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:20,099][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:20,099][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量18
+[INFO][2018-04-13 13:16:20,322][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=1523590312620699182767&statusCode=3&sendTime=201804131316|推送结果SUCCESS
+[INFO][2018-04-13 13:16:20,327][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:20,327][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量17
+[INFO][2018-04-13 13:16:20,424][com.hl95.sms.controller.StatusReportTask]执行状态读取开始
+[INFO][2018-04-13 13:16:20,424][com.hl95.sms.controller.StatusReportTask]现存于队列中的数据量17

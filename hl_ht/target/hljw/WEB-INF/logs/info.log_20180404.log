@@ -1,0 +1,14 @@
+[INFO][2018-04-04 09:06:41,908][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-04-04 09:06:41,914][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Apr 04 09:06:41 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-04-04 09:06:41,915][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-04-04 09:06:42,428][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-04-04 09:06:42,428][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-04-04 09:06:42,428][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-04-04 09:06:42,478][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 568 ms
+[INFO][2018-04-04 09:07:12,461][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-04-04 09:07:12,471][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed Apr 04 09:07:12 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-04-04 09:07:12,473][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-04-04 09:07:13,119][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-04-04 09:07:13,121][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-04-04 09:07:13,122][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-04-04 09:07:13,297][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 834 ms

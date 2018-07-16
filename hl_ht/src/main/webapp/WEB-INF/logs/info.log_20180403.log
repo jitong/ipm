@@ -1,0 +1,11 @@
+[INFO][2018-04-03 19:26:08,006][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-04-03 19:26:08,009][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Tue Apr 03 19:26:08 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-04-03 19:26:08,009][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-04-03 19:26:08,387][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-04-03 19:26:08,388][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-04-03 19:26:08,388][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-04-03 19:26:08,425][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 419 ms
+[INFO][2018-04-03 19:26:18,704][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456778900, phone=13051105228, remoteHost=127.0.0.1, subcode=, username=hltest, tplcode=DIGITAL_SMS_127955072}
+[INFO][2018-04-03 19:26:20,253][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456778900, phone=13051105228, remoteHost=127.0.0.1, subcode=, username=hltest, tplcode=DIGITAL_SMS_127955072}
+[INFO][2018-04-03 19:26:30,063][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=123456778900&statusCode=2&sendTime=201804031926|推送结果{"success":true}
+[INFO][2018-04-03 19:26:35,036][com.hl95.sms.service.impl.StatusReportServiceImpl]推送地址=http://221.179.195.89:8081/temp/sendMms/result|推送参数=linkId=123456778900&statusCode=2&sendTime=201804031926|推送结果{"success":true}

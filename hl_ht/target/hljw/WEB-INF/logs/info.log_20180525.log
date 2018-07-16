@@ -1,0 +1,1183 @@
+[INFO][2018-05-25 08:50:11,105][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 08:50:11,120][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 08:50:11 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 08:50:11,122][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[ERROR][2018-05-25 08:50:11,667][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+java.lang.RuntimeException: get connection error!
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:61)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'hljw'@'%' to database 'hl_jw'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2234)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2265)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2064)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:395)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:59)
+	... 14 more
+[ERROR][2018-05-25 08:50:11,932][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+java.lang.RuntimeException: get connection error!
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:61)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'hljw'@'%' to database 'hl_jw'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2234)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2265)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2064)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:395)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:59)
+	... 14 more
+[INFO][2018-05-25 08:50:12,259][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 08:50:12,260][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 08:50:12,260][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 08:50:12,261][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 08:50:12,262][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 08:50:12,262][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 08:50:12,262][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 08:50:12,263][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 08:50:12,263][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 08:50:12,325][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 1217 ms
+[ERROR][2018-05-25 08:50:12,938][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+java.lang.RuntimeException: get connection error!
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:61)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'hljw'@'%' to database 'hl_jw'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2234)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2265)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2064)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:395)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:59)
+	... 14 more
+[ERROR][2018-05-25 08:50:13,933][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+java.lang.RuntimeException: get connection error!
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:61)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'hljw'@'%' to database 'hl_jw'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2234)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2265)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2064)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:395)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:59)
+	... 14 more
+[ERROR][2018-05-25 08:50:14,935][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+java.lang.RuntimeException: get connection error!
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:61)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'hljw'@'%' to database 'hl_jw'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2234)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2265)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2064)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:395)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:59)
+	... 14 more
+[ERROR][2018-05-25 08:50:15,935][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+java.lang.RuntimeException: get connection error!
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:61)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'hljw'@'%' to database 'hl_jw'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2234)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2265)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2064)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:395)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:59)
+	... 14 more
+[ERROR][2018-05-25 08:50:16,938][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+java.lang.RuntimeException: get connection error!
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:61)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'hljw'@'%' to database 'hl_jw'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2234)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2265)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2064)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:395)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:59)
+	... 14 more
+[ERROR][2018-05-25 08:50:17,943][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+java.lang.RuntimeException: get connection error!
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:61)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'hljw'@'%' to database 'hl_jw'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2234)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2265)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2064)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:395)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:59)
+	... 14 more
+[ERROR][2018-05-25 08:50:18,948][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+java.lang.RuntimeException: get connection error!
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:61)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'hljw'@'%' to database 'hl_jw'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2234)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2265)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2064)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:395)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:59)
+	... 14 more
+[ERROR][2018-05-25 08:50:19,933][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+java.lang.RuntimeException: get connection error!
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:61)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'hljw'@'%' to database 'hl_jw'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2234)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2265)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2064)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:395)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:59)
+	... 14 more
+[ERROR][2018-05-25 08:50:20,936][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+java.lang.RuntimeException: get connection error!
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:61)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'hljw'@'%' to database 'hl_jw'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2234)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2265)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2064)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:395)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:59)
+	... 14 more
+[ERROR][2018-05-25 08:50:21,937][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+java.lang.RuntimeException: get connection error!
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:61)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'hljw'@'%' to database 'hl_jw'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2234)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2265)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2064)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:395)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:59)
+	... 14 more
+[ERROR][2018-05-25 08:50:22,938][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+java.lang.RuntimeException: get connection error!
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:61)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'hljw'@'%' to database 'hl_jw'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2234)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2265)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2064)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:395)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:59)
+	... 14 more
+[ERROR][2018-05-25 08:50:23,936][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+java.lang.RuntimeException: get connection error!
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:61)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Access denied for user 'hljw'@'%' to database 'hl_jw'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:870)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2234)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2265)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2064)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:790)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:395)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.hl95.utils.JdbcUtil.getConnection(JdbcUtil.java:59)
+	... 14 more
+[INFO][2018-05-25 09:10:48,491][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 09:10:48,500][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 09:10:48 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 09:10:48,501][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 09:10:49,062][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 09:10:49,063][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 09:10:49,064][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 09:10:49,066][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 09:10:49,067][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 09:10:49,068][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 09:10:49,068][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 09:10:49,069][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 09:10:49,070][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 09:10:49,135][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 643 ms
+[INFO][2018-05-25 11:40:08,324][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 11:40:08,330][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 11:40:08 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 11:40:08,333][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 11:40:08,991][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 11:40:08,991][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 11:40:08,992][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 11:40:08,993][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 11:40:08,994][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 11:40:08,995][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 11:40:08,996][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 11:40:08,996][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 11:40:08,997][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 11:40:09,075][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 750 ms
+[INFO][2018-05-25 13:16:02,587][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 13:16:02,595][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 13:16:02 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 13:16:02,597][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 13:16:03,347][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 13:16:03,348][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 13:16:03,348][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 13:16:03,356][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:16:03,357][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:16:03,358][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:16:03,359][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:16:03,360][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:16:03,367][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:16:03,446][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 858 ms
+[INFO][2018-05-25 13:20:34,467][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 13:20:34,472][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 13:20:34 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 13:20:34,473][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 13:20:35,535][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 13:20:35,535][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 13:20:35,536][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 13:20:35,537][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:20:35,538][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:20:35,538][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:20:35,539][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:20:35,539][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:20:35,542][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:20:35,625][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 1157 ms
+[INFO][2018-05-25 13:21:01,249][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[ERROR][2018-05-25 13:21:17,050][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+java.lang.NullPointerException
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:103)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO][2018-05-25 13:24:51,844][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 13:24:51,851][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 13:24:51 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 13:24:51,853][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 13:24:52,533][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 13:24:52,534][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 13:24:52,534][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 13:24:52,535][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:24:52,537][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:24:52,538][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:24:52,539][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:24:52,539][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:24:52,540][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 13:24:52,620][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 775 ms
+[INFO][2018-05-25 13:25:06,171][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 14:37:52,636][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 14:37:52,642][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 14:37:52 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 14:37:52,643][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 14:37:53,228][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 14:37:53,228][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 14:37:53,229][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 14:37:53,230][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 14:37:53,230][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 14:37:53,231][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 14:37:53,232][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 14:37:53,233][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 14:37:53,233][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 14:37:53,329][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 692 ms
+[WARN][2018-05-25 14:37:56,549][org.springframework.web.servlet.PageNotFound]No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springMvc'
+[WARN][2018-05-25 14:37:56,594][org.springframework.web.servlet.PageNotFound]No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'springMvc'
+[INFO][2018-05-25 14:38:22,660][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 14:40:26,079][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 14:41:25,867][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 14:47:39,654][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 14:47:39,662][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 14:47:39 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 14:47:39,669][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 14:47:40,315][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 14:47:40,315][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 14:47:40,316][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 14:47:40,318][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 14:47:40,319][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 14:47:40,320][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 14:47:40,321][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 14:47:40,322][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 14:47:40,322][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 14:47:40,408][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 752 ms
+[INFO][2018-05-25 14:48:02,761][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 15:16:22,909][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 15:16:22,917][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 15:16:22 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 15:16:22,919][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 15:16:23,651][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 15:16:23,652][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 15:16:23,654][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 15:16:23,656][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:16:23,658][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:16:23,658][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:16:23,659][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:16:23,660][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:16:23,680][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:16:23,816][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 906 ms
+[INFO][2018-05-25 15:16:48,855][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 15:16:48,901][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 15:16:49,008][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 15:16:49,225][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 15:16:49,372][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 15:16:49,562][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 15:16:51,230][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 15:16:51,519][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 15:16:51,563][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[ERROR][2018-05-25 15:17:22,924][com.hl95.common.controller.SmsManageController]数据提交失败！
+java.sql.SQLException: Generated keys not requested. You need to specify Statement.RETURN_GENERATED_KEYS to Statement.executeUpdate() or Connection.prepareStatement().
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:996)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:924)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:870)
+	at com.mysql.jdbc.StatementImpl.getGeneratedKeys(StatementImpl.java:1817)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:115)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[ERROR][2018-05-25 15:17:27,176][com.hl95.common.controller.SmsManageController]数据提交失败！
+java.sql.SQLException: Generated keys not requested. You need to specify Statement.RETURN_GENERATED_KEYS to Statement.executeUpdate() or Connection.prepareStatement().
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:996)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:924)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:870)
+	at com.mysql.jdbc.StatementImpl.getGeneratedKeys(StatementImpl.java:1817)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:115)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO][2018-05-25 15:26:30,273][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 15:26:30,279][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 15:26:30 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 15:26:30,280][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 15:26:30,936][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 15:26:30,937][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 15:26:30,939][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 15:26:30,940][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:26:30,941][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:26:30,941][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:26:30,943][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:26:30,943][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:26:30,944][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:26:31,022][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 748 ms
+[INFO][2018-05-25 15:30:37,063][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 15:35:39,843][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 15:35:39,855][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 15:35:39 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 15:35:39,857][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 15:35:40,582][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 15:35:40,584][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 15:35:40,585][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 15:35:40,586][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:35:40,587][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:35:40,588][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:35:40,589][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:35:40,592][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:35:40,594][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:35:40,677][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 833 ms
+[INFO][2018-05-25 15:37:51,028][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[ERROR][2018-05-25 15:38:07,462][com.hl95.common.controller.SmsManageController]数据提交失败！
+java.sql.SQLException: Generated keys not requested. You need to specify Statement.RETURN_GENERATED_KEYS to Statement.executeUpdate() or Connection.prepareStatement().
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:996)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:924)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:870)
+	at com.mysql.jdbc.StatementImpl.getGeneratedKeys(StatementImpl.java:1817)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:116)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO][2018-05-25 15:40:27,690][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 15:40:27,698][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 15:40:27 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 15:40:27,701][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 15:40:28,588][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 15:40:28,590][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 15:40:28,591][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 15:40:28,592][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:40:28,593][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:40:28,593][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:40:28,594][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:40:28,658][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:40:28,659][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:40:28,741][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 1049 ms
+[INFO][2018-05-25 15:40:38,824][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 15:57:23,243][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[ERROR][2018-05-25 15:57:23,973][com.hl95.common.controller.SmsManageController]数据提交失败！
+java.sql.SQLException: Column 'BatchNo' not found.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:996)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:924)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:870)
+	at com.mysql.jdbc.ResultSetImpl.findColumn(ResultSetImpl.java:1064)
+	at com.mysql.jdbc.ResultSetImpl.getString(ResultSetImpl.java:5201)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:120)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO][2018-05-25 15:57:42,332][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 15:57:42,338][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 15:57:42 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 15:57:42,341][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 15:57:42,919][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 15:57:42,920][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 15:57:42,921][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 15:57:42,923][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:57:42,924][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:57:42,925][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:57:42,926][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:57:42,934][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:57:42,935][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 15:57:43,253][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 920 ms
+[INFO][2018-05-25 15:58:03,198][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[ERROR][2018-05-25 15:58:04,719][com.hl95.common.controller.SmsManageController]数据提交失败！
+java.sql.SQLException: Column 'BatchNo' not found.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:996)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:924)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:870)
+	at com.mysql.jdbc.ResultSetImpl.findColumn(ResultSetImpl.java:1064)
+	at com.mysql.jdbc.ResultSetImpl.getString(ResultSetImpl.java:5201)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:120)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO][2018-05-25 16:01:24,268][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[ERROR][2018-05-25 16:01:25,721][com.hl95.common.controller.SmsManageController]数据提交失败！
+java.sql.SQLException: Column 'BatchNo' not found.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:996)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:924)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:870)
+	at com.mysql.jdbc.ResultSetImpl.findColumn(ResultSetImpl.java:1064)
+	at com.mysql.jdbc.ResultSetImpl.getString(ResultSetImpl.java:5201)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:120)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO][2018-05-25 16:11:55,324][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[ERROR][2018-05-25 16:13:36,705][com.hl95.common.controller.SmsManageController]数据提交失败！
+java.sql.SQLException: Column 'BatchNo' not found.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:996)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:924)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:870)
+	at com.mysql.jdbc.ResultSetImpl.findColumn(ResultSetImpl.java:1064)
+	at com.mysql.jdbc.ResultSetImpl.getString(ResultSetImpl.java:5201)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:120)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO][2018-05-25 16:14:58,014][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 16:14:58,026][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 16:14:58 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 16:14:58,030][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 16:14:58,785][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 16:14:58,787][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 16:14:58,788][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 16:14:58,790][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:14:58,790][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:14:58,791][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:14:58,791][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:14:58,792][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:14:58,792][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:14:58,855][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 840 ms
+[WARN][2018-05-25 16:15:22,332][org.springframework.web.servlet.PageNotFound]No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springMvc'
+[INFO][2018-05-25 16:15:29,926][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[ERROR][2018-05-25 16:15:39,138][com.hl95.common.controller.SmsManageController]数据提交失败！
+java.sql.SQLException: Column Index out of range, 2 > 1. 
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:996)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:924)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:870)
+	at com.mysql.jdbc.ResultSetImpl.checkColumnBounds(ResultSetImpl.java:758)
+	at com.mysql.jdbc.ResultSetImpl.getStringInternal(ResultSetImpl.java:5240)
+	at com.mysql.jdbc.ResultSetImpl.getString(ResultSetImpl.java:5162)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:120)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO][2018-05-25 16:16:22,096][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 16:16:22,105][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 16:16:22 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 16:16:22,106][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 16:16:22,686][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 16:16:22,687][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 16:16:22,688][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 16:16:22,689][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:16:22,689][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:16:22,690][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:16:22,690][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:16:22,690][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:16:22,694][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:16:22,757][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 660 ms
+[INFO][2018-05-25 16:16:35,961][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:16:36,048][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:16:36,122][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:16:36,264][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:16:36,367][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:16:36,533][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:16:36,794][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:16:37,008][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:16:38,357][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:16:38,611][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:16:38,649][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:16:38,732][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:16:38,840][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[ERROR][2018-05-25 16:16:56,945][com.hl95.common.controller.SmsManageController]数据提交失败！
+java.sql.SQLException: Column Index out of range, 2 > 1. 
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:996)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:924)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:870)
+	at com.mysql.jdbc.ResultSetImpl.checkColumnBounds(ResultSetImpl.java:758)
+	at com.mysql.jdbc.ResultSetImpl.getStringInternal(ResultSetImpl.java:5240)
+	at com.mysql.jdbc.ResultSetImpl.getString(ResultSetImpl.java:5162)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[ERROR][2018-05-25 16:16:58,635][com.hl95.common.controller.SmsManageController]数据提交失败！
+java.sql.SQLException: Column Index out of range, 2 > 1. 
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:996)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:924)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:870)
+	at com.mysql.jdbc.ResultSetImpl.checkColumnBounds(ResultSetImpl.java:758)
+	at com.mysql.jdbc.ResultSetImpl.getStringInternal(ResultSetImpl.java:5240)
+	at com.mysql.jdbc.ResultSetImpl.getString(ResultSetImpl.java:5162)
+	at com.hl95.common.controller.SmsManageController.propelSms(SmsManageController.java:120)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO][2018-05-25 16:17:35,154][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 16:17:35,160][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 16:17:35 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 16:17:35,162][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 16:17:35,793][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 16:17:35,794][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 16:17:35,795][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 16:17:35,797][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:17:35,798][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:17:35,799][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:17:35,799][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:17:35,801][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:17:35,803][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:17:35,865][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 710 ms
+[INFO][2018-05-25 16:18:48,929][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:18:49,026][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:18:49,179][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:18:49,256][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:18:49,437][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:22:05,942][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 16:22:05,951][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 16:22:05 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 16:22:05,952][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 16:22:06,895][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 16:22:06,899][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 16:22:06,900][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 16:22:06,903][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:22:06,904][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:22:06,905][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:22:06,907][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:22:06,908][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:22:06,909][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:22:07,003][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 1060 ms
+[INFO][2018-05-25 16:22:19,734][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:22:19,886][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:22:19,949][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:22:20,071][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:22:58,220][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:22:58,552][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:22:58,717][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:22:58,980][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:54:58,082][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 16:54:58,092][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 16:54:58 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 16:54:58,095][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 16:54:58,704][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 16:54:58,705][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 16:54:58,706][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 16:54:58,707][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:54:58,708][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:54:58,710][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:54:58,711][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:54:58,711][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:54:58,712][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:54:58,782][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 698 ms
+[INFO][2018-05-25 16:55:05,788][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:55:05,851][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:55:05,961][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:55:06,146][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:55:06,359][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:55:06,544][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:55:07,512][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:56:09,023][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-25 16:56:09,032][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Fri May 25 16:56:09 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-25 16:56:09,034][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-25 16:56:09,564][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-25 16:56:09,565][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-25 16:56:09,565][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-25 16:56:09,566][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:56:09,567][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:56:09,567][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:56:09,568][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:56:09,568][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:56:09,570][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-25 16:56:09,638][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 614 ms
+[INFO][2018-05-25 16:56:26,226][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:56:49,942][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:56:50,269][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:56:50,322][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:56:50,549][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:56:50,842][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
+[INFO][2018-05-25 16:56:50,970][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=123456, signame=1111, phone=13716072540, remoteHost=127.0.0.1, subcode=7890, message=这是一条测试, username=hltest}
