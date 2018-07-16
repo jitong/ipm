@@ -1,0 +1,31 @@
+[INFO][2018-05-30 08:45:30,285][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-30 08:45:30,292][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed May 30 08:45:30 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-30 08:45:30,294][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-30 08:45:30,941][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-30 08:45:30,942][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-30 08:45:30,943][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-30 08:45:30,945][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-30 08:45:30,946][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-30 08:45:30,946][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-30 08:45:30,947][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-30 08:45:30,948][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-30 08:45:30,948][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-30 08:45:31,031][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 743 ms
+[WARN][2018-05-30 09:00:47,968][org.springframework.web.servlet.PageNotFound]No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springMvc'
+[WARN][2018-05-30 09:00:48,505][org.springframework.web.servlet.PageNotFound]No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springMvc'
+[WARN][2018-05-30 09:00:48,826][org.springframework.web.servlet.PageNotFound]No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'springMvc'
+[INFO][2018-05-30 11:07:06,837][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-30 11:07:06,847][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Wed May 30 11:07:06 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-30 11:07:06,848][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-30 11:07:07,442][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-30 11:07:07,442][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-30 11:07:07,444][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-30 11:07:07,445][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-30 11:07:07,446][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-30 11:07:07,447][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-30 11:07:07,447][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-30 11:07:07,448][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-30 11:07:07,448][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-30 11:07:07,515][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 677 ms
+[WARN][2018-05-30 11:07:19,088][org.springframework.web.servlet.PageNotFound]No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springMvc'
+[WARN][2018-05-30 11:07:19,628][org.springframework.web.servlet.PageNotFound]No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springMvc'

@@ -1,0 +1,869 @@
+[INFO][2018-05-29 08:14:12,161][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-29 08:14:12,180][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Tue May 29 08:14:12 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-29 08:14:12,185][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-29 08:14:13,153][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-29 08:14:13,154][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-29 08:14:13,155][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-29 08:14:13,157][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:14:13,183][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:14:13,184][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:14:13,184][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:14:13,185][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:14:13,186][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:14:13,263][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 1095 ms
+[INFO][2018-05-29 08:14:30,152][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=12334, signame=中信银行, phone=13716072540, remoteHost=127.0.0.1, message=尊敬的客户，恭喜获得中信白金卡申请资格！额度高，随时取现，最长50天免息还款。官网申请 0x7.me/7K3x 退订回T, username=hltest}
+[ERROR][2018-05-29 08:14:48,363][com.alibaba.druid.filter.stat.StatFilter]merge sql error, dbType mysql, sql : 
+update sms_msg_log
+			set
+			 receiveDate = 
+			 case requestId  
+				when 205c38367c544145b67cd47ed2ed7e96 then 
+			 end 
+			END,
+			statusCode = 
+			 case requestId  
+				when 205c38367c544145b67cd47ed2ed7e96 then HND:009
+			 end 
+			END
+		where 
+		   
+			requestId = 205c38367c544145b67cd47ed2ed7e96
+com.alibaba.druid.sql.parser.ParserException: syntax error, expect END, actual VARIANT :009
+	at com.alibaba.druid.sql.parser.SQLExprParser.accept(SQLExprParser.java:1449)
+	at com.alibaba.druid.sql.parser.SQLExprParser.primary(SQLExprParser.java:352)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlExprParser.primary(MySqlExprParser.java:166)
+	at com.alibaba.druid.sql.parser.SQLExprParser.expr(SQLExprParser.java:118)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateSet(MySqlStatementParser.java:2629)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateStatement(MySqlStatementParser.java:218)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:150)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:121)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:116)
+	at com.alibaba.druid.sql.visitor.ParameterizedOutputVisitorUtils.parameterize(ParameterizedOutputVisitorUtils.java:53)
+	at com.alibaba.druid.filter.stat.StatFilter.mergeSql(StatFilter.java:145)
+	at com.alibaba.druid.filter.stat.StatFilter.createSqlStat(StatFilter.java:629)
+	at com.alibaba.druid.filter.stat.StatFilter.statementPrepareAfter(StatFilter.java:305)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_prepareStatement(FilterEventAdapter.java:124)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:342)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:318)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:75)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:85)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:57)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:73)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:47)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	at com.sun.proxy.$Proxy14.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:254)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:54)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy15.updateMsgLogStatus(Unknown Source)
+	at com.hl95.common.service.impl.SmsManageServiceImpl.updateMsgLogStatus(SmsManageServiceImpl.java:191)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy18.updateMsgLogStatus(Unknown Source)
+	at com.hl95.common.controller.SmsManageController.getSms(SmsManageController.java:192)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO][2018-05-29 08:14:48,382][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[INFO][2018-05-29 08:14:48,458][org.springframework.jdbc.support.SQLErrorCodesFactory]SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[ERROR][2018-05-29 08:14:48,472][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: #42000
+### The error may involve com.hl95.common.dao.ISmsManageDao.updateMsgLogStatus-Inline
+### The error occurred while setting parameters
+### SQL: update sms_msg_log    set     receiveDate =      case requestId       when 205c38367c544145b67cd47ed2ed7e96 then      end     END,    statusCode =      case requestId       when 205c38367c544145b67cd47ed2ed7e96 then HND:009     end     END   where           requestId = 205c38367c544145b67cd47ed2ed7e96
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: #42000
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: #42000
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:371)
+	at com.sun.proxy.$Proxy14.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:254)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:54)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy15.updateMsgLogStatus(Unknown Source)
+	at com.hl95.common.service.impl.SmsManageServiceImpl.updateMsgLogStatus(SmsManageServiceImpl.java:191)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy18.updateMsgLogStatus(Unknown Source)
+	at com.hl95.common.controller.SmsManageController.getSms(SmsManageController.java:192)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: #42000
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1199)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:44)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:69)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	... 36 more
+[INFO][2018-05-29 08:16:49,266][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-29 08:16:49,273][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Tue May 29 08:16:49 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-29 08:16:49,275][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-29 08:16:49,917][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-29 08:16:49,919][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-29 08:16:49,922][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-29 08:16:49,924][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:16:49,924][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:16:49,925][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:16:49,926][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:16:49,927][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:16:49,928][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:16:50,091][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 824 ms
+[INFO][2018-05-29 08:17:23,646][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=12334, signame=中信银行, phone=13716072540, remoteHost=127.0.0.1, message=尊敬的客户，恭喜获得中信白金卡申请资格！额度高，随时取现，最长50天免息还款。官网申请 0x7.me/7K3x 退订回T, username=hltest}
+[ERROR][2018-05-29 08:17:47,585][com.alibaba.druid.filter.stat.StatFilter]merge sql error, dbType mysql, sql : 
+update sms_msg_log
+			set
+			 receiveDate = 
+			 case requestId  
+				when cd4f762effcf49b783f16b679320e878 then 
+			 end 
+			,
+			statusCode = 
+			 case requestId  
+				when cd4f762effcf49b783f16b679320e878 then HND:009
+			 end 
+		where 
+		   
+			requestId = cd4f762effcf49b783f16b679320e878
+com.alibaba.druid.sql.parser.ParserException: syntax error, expect END, actual COMMA end
+	at com.alibaba.druid.sql.parser.SQLExprParser.accept(SQLExprParser.java:1449)
+	at com.alibaba.druid.sql.parser.SQLExprParser.primary(SQLExprParser.java:352)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlExprParser.primary(MySqlExprParser.java:166)
+	at com.alibaba.druid.sql.parser.SQLExprParser.expr(SQLExprParser.java:118)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateSet(MySqlStatementParser.java:2629)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateStatement(MySqlStatementParser.java:218)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:150)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:121)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:116)
+	at com.alibaba.druid.sql.visitor.ParameterizedOutputVisitorUtils.parameterize(ParameterizedOutputVisitorUtils.java:53)
+	at com.alibaba.druid.filter.stat.StatFilter.mergeSql(StatFilter.java:145)
+	at com.alibaba.druid.filter.stat.StatFilter.createSqlStat(StatFilter.java:629)
+	at com.alibaba.druid.filter.stat.StatFilter.statementPrepareAfter(StatFilter.java:305)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_prepareStatement(FilterEventAdapter.java:124)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:342)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:318)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:75)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:85)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:57)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:73)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:47)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	at com.sun.proxy.$Proxy14.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:254)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:54)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy15.updateMsgLogStatus(Unknown Source)
+	at com.hl95.common.service.impl.SmsManageServiceImpl.updateMsgLogStatus(SmsManageServiceImpl.java:191)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy18.updateMsgLogStatus(Unknown Source)
+	at com.hl95.common.controller.SmsManageController.getSms(SmsManageController.java:192)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO][2018-05-29 08:17:47,599][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[INFO][2018-05-29 08:17:47,652][org.springframework.jdbc.support.SQLErrorCodesFactory]SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[ERROR][2018-05-29 08:17:47,668][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: #42000
+### The error may involve com.hl95.common.dao.ISmsManageDao.updateMsgLogStatus-Inline
+### The error occurred while setting parameters
+### SQL: update sms_msg_log    set     receiveDate =      case requestId       when cd4f762effcf49b783f16b679320e878 then      end     ,    statusCode =      case requestId       when cd4f762effcf49b783f16b679320e878 then HND:009     end    where           requestId = cd4f762effcf49b783f16b679320e878
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: #42000
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: #42000
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:371)
+	at com.sun.proxy.$Proxy14.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:254)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:54)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy15.updateMsgLogStatus(Unknown Source)
+	at com.hl95.common.service.impl.SmsManageServiceImpl.updateMsgLogStatus(SmsManageServiceImpl.java:191)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy18.updateMsgLogStatus(Unknown Source)
+	at com.hl95.common.controller.SmsManageController.getSms(SmsManageController.java:192)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: #42000
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1199)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:44)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:69)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	... 36 more
+[INFO][2018-05-29 08:20:04,090][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-29 08:20:04,098][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Tue May 29 08:20:04 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-29 08:20:04,101][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-29 08:20:04,742][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-29 08:20:04,743][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-29 08:20:04,744][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-29 08:20:04,746][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:20:04,747][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:20:04,747][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:20:04,748][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:20:04,749][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:20:04,752][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:20:04,825][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 734 ms
+[INFO][2018-05-29 08:20:08,191][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=12334, signame=中信银行, phone=13716072540, remoteHost=127.0.0.1, message=尊敬的客户，恭喜获得中信白金卡申请资格！额度高，随时取现，最长50天免息还款。官网申请 0x7.me/7K3x 退订回T, username=hltest}
+[ERROR][2018-05-29 08:20:28,424][com.alibaba.druid.filter.stat.StatFilter]merge sql error, dbType mysql, sql : 
+update sms_msg_log
+			set
+			
+			statusCode = 
+			 case requestId  
+				when 98b3c8500743426aa9a2938d112720a4 then HND:009
+			 end 
+		where 
+		   
+			requestId = 98b3c8500743426aa9a2938d112720a4
+com.alibaba.druid.sql.parser.ParserException: syntax error, expect END, actual VARIANT :009
+	at com.alibaba.druid.sql.parser.SQLExprParser.accept(SQLExprParser.java:1449)
+	at com.alibaba.druid.sql.parser.SQLExprParser.primary(SQLExprParser.java:352)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlExprParser.primary(MySqlExprParser.java:166)
+	at com.alibaba.druid.sql.parser.SQLExprParser.expr(SQLExprParser.java:118)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateSet(MySqlStatementParser.java:2629)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateStatement(MySqlStatementParser.java:218)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:150)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:121)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:116)
+	at com.alibaba.druid.sql.visitor.ParameterizedOutputVisitorUtils.parameterize(ParameterizedOutputVisitorUtils.java:53)
+	at com.alibaba.druid.filter.stat.StatFilter.mergeSql(StatFilter.java:145)
+	at com.alibaba.druid.filter.stat.StatFilter.createSqlStat(StatFilter.java:629)
+	at com.alibaba.druid.filter.stat.StatFilter.statementPrepareAfter(StatFilter.java:305)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_prepareStatement(FilterEventAdapter.java:124)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:342)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:318)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:75)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:85)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:57)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:73)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:47)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	at com.sun.proxy.$Proxy14.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:254)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:54)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy15.updateMsgLogStatus(Unknown Source)
+	at com.hl95.common.service.impl.SmsManageServiceImpl.updateMsgLogStatus(SmsManageServiceImpl.java:191)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy18.updateMsgLogStatus(Unknown Source)
+	at com.hl95.common.controller.SmsManageController.getSms(SmsManageController.java:192)
+	at sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO][2018-05-29 08:20:28,439][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[INFO][2018-05-29 08:20:28,493][org.springframework.jdbc.support.SQLErrorCodesFactory]SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[ERROR][2018-05-29 08:20:28,510][org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler]Unexpected error occurred in scheduled task.
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: #42000
+### The error may involve com.hl95.common.dao.ISmsManageDao.updateMsgLogStatus-Inline
+### The error occurred while setting parameters
+### SQL: update sms_msg_log    set        statusCode =      case requestId       when 98b3c8500743426aa9a2938d112720a4 then HND:009     end    where           requestId = 98b3c8500743426aa9a2938d112720a4
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: #42000
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: #42000
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:371)
+	at com.sun.proxy.$Proxy14.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:254)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:54)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy15.updateMsgLogStatus(Unknown Source)
+	at com.hl95.common.service.impl.SmsManageServiceImpl.updateMsgLogStatus(SmsManageServiceImpl.java:191)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at com.alibaba.druid.support.spring.stat.DruidStatInterceptor.invoke(DruidStatInterceptor.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+	at com.sun.proxy.$Proxy18.updateMsgLogStatus(Unknown Source)
+	at com.hl95.common.controller.SmsManageController.getSms(SmsManageController.java:192)
+	at sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: #42000
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1199)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:44)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:69)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	... 36 more
+[INFO][2018-05-29 08:26:07,016][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-29 08:26:07,025][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Tue May 29 08:26:07 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-29 08:26:07,027][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-29 08:26:07,646][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-29 08:26:07,646][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-29 08:26:07,647][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-29 08:26:07,649][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:26:07,650][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:26:07,650][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:26:07,651][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:26:07,651][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:26:07,652][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-29 08:26:07,720][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 703 ms
+[INFO][2018-05-29 08:26:11,878][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=12334, signame=中信银行, phone=13716072540, remoteHost=127.0.0.1, message=尊敬的客户，恭喜获得中信白金卡申请资格！额度高，随时取现，最长50天免息还款。官网申请 0x7.me/7K3x 退订回T, username=hltest}
+[INFO][2018-05-29 09:45:28,396][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-29 09:45:28,402][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Tue May 29 09:45:28 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-29 09:45:28,404][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-29 09:45:29,033][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-29 09:45:29,034][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-29 09:45:29,035][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-29 09:45:29,036][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-29 09:45:29,037][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-29 09:45:29,038][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-29 09:45:29,038][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-29 09:45:29,038][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-29 09:45:29,039][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-29 09:45:29,104][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 707 ms
+[INFO][2018-05-29 09:49:13,708][com.hl95.common.service.impl.SmsManageServiceImpl]请求参数={password=670b14728ad9902aecba32e22fa4f6bd, linkid=12334, signame=中信银行, phone=13604882140, remoteHost=127.0.0.1, message=尊敬的客户，恭喜获得中信白金卡申请资格！额度高，随时取现，最长50天免息还款。官网申请 0x7.me/7K3x 退订回T, username=hltest}
+[INFO][2018-05-29 18:31:59,826][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-29 18:31:59,838][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Tue May 29 18:31:59 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-29 18:31:59,840][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-29 18:32:00,559][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send2/{order}/a] onto handler 'smsManageController'
+[INFO][2018-05-29 18:32:00,561][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send2/{order}/a.*] onto handler 'smsManageController'
+[INFO][2018-05-29 18:32:00,562][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send2/{order}/a/] onto handler 'smsManageController'
+[INFO][2018-05-29 18:32:00,562][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-29 18:32:00,563][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-29 18:32:00,563][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-29 18:32:00,565][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-29 18:32:00,568][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-29 18:32:00,569][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-29 18:32:00,571][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-29 18:32:00,572][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-29 18:32:00,577][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-29 18:32:00,648][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 820 ms
+[WARN][2018-05-29 18:32:07,215][org.springframework.web.servlet.PageNotFound]No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springMvc'
+[INFO][2018-05-29 18:32:40,559][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,596][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,605][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,613][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,622][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,631][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,655][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,662][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,673][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,682][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,696][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,709][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,726][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,742][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,753][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,771][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,787][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,801][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,829][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,853][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,872][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,945][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,963][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:40,989][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,010][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,050][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,076][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,126][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,175][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,229][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,271][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,301][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,325][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,354][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,399][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,428][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,454][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,479][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,506][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,527][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,574][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,619][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,640][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,664][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,687][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,715][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,741][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,766][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,793][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,818][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,843][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,865][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,892][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,917][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,941][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,959][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:41,986][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,008][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,034][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,056][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,080][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,103][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,120][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,144][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,167][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,190][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,217][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,238][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,257][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,279][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,296][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,320][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,343][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,365][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,433][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,565][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,661][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,692][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,734][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,768][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,795][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,818][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,847][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,873][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,899][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,926][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,960][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:42,999][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,028][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,051][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,079][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,109][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,139][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,167][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,194][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,219][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,252][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,277][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,305][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,330][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,354][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,379][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,398][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,415][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,434][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,452][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,470][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,492][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,562][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,585][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,605][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,627][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,646][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,668][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,693][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,715][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,737][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,758][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,775][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,793][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,824][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,850][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,870][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,891][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,910][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,928][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,945][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,962][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,976][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:43,990][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,006][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,019][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,033][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,048][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,065][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,082][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,104][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,123][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,137][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,152][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,166][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,184][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,209][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,223][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,236][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,251][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,265][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,279][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,296][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,312][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,328][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,342][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,356][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,369][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,382][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,396][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,410][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,424][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,463][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,484][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,507][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,534][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,566][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,603][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,630][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,659][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,684][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,709][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,737][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,768][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,799][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,838][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,863][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,887][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,911][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,939][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,973][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:44,998][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,023][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,048][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,074][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,101][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,128][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,154][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,253][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,282][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,306][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,333][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,360][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,383][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,405][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,427][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,455][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,475][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,498][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,523][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,549][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,571][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,587][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,608][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,633][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,658][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,680][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,703][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,724][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,747][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,770][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,795][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,816][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,838][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,861][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,884][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,906][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,922][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,938][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,952][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,969][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:45,984][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,006][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,033][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,058][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,081][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,103][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,122][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,144][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,159][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,177][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,204][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,228][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,251][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,273][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,296][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,324][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,343][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,359][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,373][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,392][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,417][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,435][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,454][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,471][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,490][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,506][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,522][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,540][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,562][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,587][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,610][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,629][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,643][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,663][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,680][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,699][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,721][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,744][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,759][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,781][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,796][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,811][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,824][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,838][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,852][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,865][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,879][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,895][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,912][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,925][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,938][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,950][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,964][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,977][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:46,990][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:32:47,008][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:34:06,236][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization started
+[INFO][2018-05-29 18:34:06,247][org.springframework.web.context.support.XmlWebApplicationContext]Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Tue May 29 18:34:06 CST 2018]; parent: Root WebApplicationContext
+[INFO][2018-05-29 18:34:06,255][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+[INFO][2018-05-29 18:34:06,985][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send2/{order}/a] onto handler 'smsManageController'
+[INFO][2018-05-29 18:34:06,986][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send2/{order}/a.*] onto handler 'smsManageController'
+[INFO][2018-05-29 18:34:06,988][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send2/{order}/a/] onto handler 'smsManageController'
+[INFO][2018-05-29 18:34:06,989][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send] onto handler 'smsManageController'
+[INFO][2018-05-29 18:34:06,989][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send.*] onto handler 'smsManageController'
+[INFO][2018-05-29 18:34:06,990][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/api/sms/send/] onto handler 'smsManageController'
+[INFO][2018-05-29 18:34:06,991][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon] onto handler 'smsReceiveController'
+[INFO][2018-05-29 18:34:06,991][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon.*] onto handler 'smsReceiveController'
+[INFO][2018-05-29 18:34:06,992][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/upon/] onto handler 'smsReceiveController'
+[INFO][2018-05-29 18:34:06,992][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report] onto handler 'smsReceiveController'
+[INFO][2018-05-29 18:34:06,992][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report.*] onto handler 'smsReceiveController'
+[INFO][2018-05-29 18:34:06,993][org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping]Mapped URL path [/report/] onto handler 'smsReceiveController'
+[INFO][2018-05-29 18:34:07,076][org.springframework.web.servlet.DispatcherServlet]FrameworkServlet 'springMvc': initialization completed in 837 ms
+[INFO][2018-05-29 18:34:29,246][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:34:30,800][com.hl95.common.controller.SmsManageController]=======aa
+[INFO][2018-05-29 18:34:35,668][com.hl95.common.controller.SmsManageController]=======aa
+[WARN][2018-05-29 18:34:35,737][org.springframework.web.servlet.PageNotFound]No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'springMvc'
